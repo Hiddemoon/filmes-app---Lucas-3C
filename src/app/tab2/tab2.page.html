@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/movies"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes do Filme</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img
+      src="https://www.komar.de/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/v/d/vd-046-star-wars-official-poster-ep7.jpg"
+    ></ion-img>
+    <ion-card-header>
+      <ion-card-title>Stars Wars</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Data de Lançamento: 22/02/2007</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Gênero: Ação</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let ator of atores"> {{ ator }} </ion-item>
+  </ion-list>
+
+  <div class="buttons-container">
+    <ion-button expand="full">Avaliar</ion-button>
+    <ion-button expand="full" color="danger">Remover</ion-button>
+  </div>
+
+  <ion-item>
+    <ion-label>Deixe um comentário</ion-label>
+    <ion-input (ionChange)="onCommentChange($event.target.value)"></ion-input>
+  </ion-item>
+</ion-content>

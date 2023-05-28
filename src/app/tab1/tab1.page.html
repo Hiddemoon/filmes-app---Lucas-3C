@@ -1,0 +1,130 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="end" name="grid-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-segment scrollable value="1">
+    <ion-segment-button value="1">
+      <ion-label>Filmes recentes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="3">
+      <ion-label>Escritório</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="4">
+      <ion-label>TV Shows</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-badge color="light">Ação</ion-badge>
+        </ion-col>
+        <ion-col size="3">
+          <ion-badge color="light">Crime</ion-badge>
+        </ion-col>
+        <ion-col size="3">
+          <ion-badge color="light">Terror</ion-badge>
+        </ion-col>
+        <ion-col size="3">
+          <ion-badge color="light">Drama</ion-badge>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-slides [options]="options">
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="poster-col">
+            <img
+              class="poster"
+              src="https://www.komar.de/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/v/d/vd-046-star-wars-official-poster-ep7.jpg"
+              alt=""
+            />
+          </ion-col>
+          <ion-col size="12">
+            <h5 class="ion-no-margin">Star Wars</h5>
+            <p class="ion-no-margin rate">
+              <ion-icon name="star"></ion-icon> 8.5
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="poster-col">
+            <img
+              class="poster"
+              src="https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/black-panther-web.jpg"
+              alt=""
+            />
+          </ion-col>
+          <ion-col size="12">
+            <h5 class="ion-no-margin">Pantera negra</h5>
+            <p class="ion-no-margin rate">
+              <ion-icon name="star"></ion-icon> 8.5
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="poster-col">
+            <img
+              class="poster"
+              src="https://www.komar.de/media/cms/fileadmin/user_upload/Category/Fototapeten/Disney/Disney-Frozen/frozen-double-1.jpg"
+              alt=""
+            />
+          </ion-col>
+          <ion-col size="12">
+            <h5 class="ion-no-margin">Frozen</h5>
+            <p class="ion-no-margin rate">
+              <ion-icon name="star"></ion-icon> 8.5
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="poster-col">
+            <img
+              class="poster"
+              src="https://www.komar.de/media/catalog/product/cache/4/image/1230x/17f82f742ffe127f42dca9de82fb58b1/4/-/4-4124_avengers_movie_poster_web.jpg"
+              alt=""
+            />
+          </ion-col>
+          <ion-col size="12">
+            <h5 class="ion-no-margin">Avengers</h5>
+            <p class="ion-no-margin rate">
+              <ion-icon name="star"></ion-icon> 8.5
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
